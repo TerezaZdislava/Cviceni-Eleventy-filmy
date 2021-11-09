@@ -1,3 +1,14 @@
 <footer class="hlavicka">
-	<p>paticka</p>
+	<h2>Podobné weby</h2>
+	<ul>
+		{% for item in podobneWeby %}
+		<li><a href="/podobne/{{item.adresa | slug}}">{{ item.nazev }}</a></li>
+		{% endfor %}
+	</ul>
+	<h2>Obecne</h2>
+	{# <ul>
+		{% for item in podobneWeby %}
+		<li><a href="/podobne/{{item.adresa | slug}}">{{ item.nazev }}</a></li>
+		{% endfor %}
+	</ul> #}
 </footer>
