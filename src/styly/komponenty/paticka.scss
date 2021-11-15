@@ -1,0 +1,34 @@
+.paticka {
+  background-color: #fafafa;
+  padding: 1rem 0;
+}
+.paticka__obsah {
+  max-width: 52rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+}
+.paticka__casti {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  gap: 1rem;
+}
+h2 {
+  margin: 0;
+  font-size: 1.1em;
+  color: #303030;
+}
+.paticka__odkaz {
+  color: inherit;
+  text-decoration: none;
+  color: #444444;
+}
+.paticka__polozka {
+  padding: 0.2em 0;
+  line-height: 1.1;
+}
+.paticka__seznam {
+  margin: 0.5em 0 0;
+  padding: 0;
+  list-style-type: none;
+}

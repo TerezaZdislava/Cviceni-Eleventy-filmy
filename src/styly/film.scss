@@ -1,0 +1,56 @@
+.detail__podrobnosti {
+  margin: 0 0 1.7em;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.2em 0.5em;
+  & dd {
+    margin: 0;
+  }
+}
+.detail__popisek {
+  font-weight: 700;
+}
+.hlavni-nadpis {
+  margin: 0 0 0.5em;
+  font-size: 2rem;
+}
+.podnadpis {
+  margin: 0.8em0 0.2em;
+  font-size: 1.5rem;
+}
+.detail__plakat {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+.autor__odkaz {
+  font-style: italic;
+  text-decoration: none;
+  color: #3d5afe;
+}
+
+.hodnoceni {
+  --skore: 0;
+  width: 7.5rem;
+  height: 1.5rem;
+  display: flex;
+}
+.hodnoceni::after {
+  background-image: url('/obrazky/hvezda-prazdna.svg');
+  flex-grow: calc(5 - var(--skore));
+}
+.hodnoceni::before {
+  content: '';
+  background-image: url('/obrazky/hvezda-vyplnena.svg');
+  background-size: contain;
+  flex-grow: var(--skore);
+}
+.hodnoceni--skore-5 {
+  --skore: 5;
+}
+.hodnoceni--skore-4 {
+  --skore: 4;
+}
+.hodnoceni--skore-3 {
+  --skore: 3;
+}

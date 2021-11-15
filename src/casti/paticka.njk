@@ -1,14 +1,22 @@
-<footer class="hlavicka">
-	<h2>Podobné weby</h2>
-	<ul>
-		{% for item in podobneWeby %}
-		<li><a href="/podobne/{{item.adresa | slug}}">{{ item.nazev }}</a></li>
-		{% endfor %}
-	</ul>
-	<h2>Obecne</h2>
-	{# <ul>
-		{% for item in podobneWeby %}
-		<li><a href="/podobne/{{item.adresa | slug}}">{{ item.nazev }}</a></li>
-		{% endfor %}
-	</ul> #}
+<footer class="paticka">
+	<div class="paticka__obsah">
+		<div class="paticka__casti">
+			<section>
+				<h2>Podobné weby</h2>
+				<ul>
+					{% for item in podobneWeby %}
+					<li class="paticka__polozka"><a class="paticka__odkaz" href="/podobne/{{item.adresa | slug}}">{{ item.nazev }}</a></li>
+					{% endfor %}
+				</ul>
+			</section>
+			<section>
+				<h2>Obecne</h2>
+				<ul class="paticka__seznam">
+					<li class="paticka__polozka"><a class="paticka__odkaz" href="/puvod-dat/">Puvod dat</a></li>
+					<li class="paticka__polozka"><a class="paticka__odkaz" href="https://www.11ty.dev/docs/getting-started/">Eleventy dokumentace</a></li>
+					<li class="paticka__polozka"><a class="paticka__odkaz" href="https://github.com/Czechitas-podklady-WEB/Cviceni-Eleventy-filmy">Zadani cviceni</a></li>
+				</ul>
+			</section>
+		</div>
+	</div>
 </footer>

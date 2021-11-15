@@ -1,11 +1,3 @@
-$sirka-obsahu: 50rem;
-$mezera-od-okraju: 1rem;
-
-$font: 'Roboto', sans-serif;
-
-$hlavni-barva: #9c27b0;
-$doplnkova-barva: #3d5afe;
-
 html {
   box-sizing: border-box;
 }
@@ -19,4 +11,38 @@ html {
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
+  font-family: $font;
+}
+.layout {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+.layout__telo {
+  max-width: $sirka-obsahu;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.seznam__odkaz {
+  color: #3d5afe;
+  text-decoration: none;
+}
+.seznam__polozka {
+  padding: 0.2em 0;
+  line-height: 1.1;
+}
+.seznam {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.seznam__odkaz::before {
+  content: '';
+  margin-bottom: 0.1em;
+  width: 0.5em;
+  height: 0.5em;
+  background-color: currentColor;
+  display: inline-block;
+  margin-right: 0.5em;
 }
