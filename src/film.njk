@@ -18,19 +18,32 @@ permalink: "/film/{{ film.nazev | slug }}/"
     <dt class="detail__popisek">Délka:</dt>
     <dd>{{ film.delka }} minut</dd>
   </dl>
-  <h3 class="podnadpis">Obsah</h3>
-  <p>{{ film.obsah.text }}<span ><a class="autor__odkaz" target="_blanc" href="{{film.obsah.autor.odkaz}}">({{ film.obsah.autor.jmeno }})</a></span></p>
+  <section>
+    <h3 class="podnadpis">Obsah</h3>
+    <p>{{ film.obsah.text }}</p>
+      {% if film.obsah.autor.odkaz %}
+        <a class="autor__odkaz" target="_blanc" href="{{film.obsah.autor.odkaz}}">({{ film.obsah.autor.jmeno }})</a>
+      {% else %}
+        <span>({{ film.obsah.autor.jmeno }})</span>
+      {% endif %}
+  </section>
 </main>
 <aside>
   <img class="detail__plakat" src={{film.plakat.url}}>
-  <h3 class="podnadpis">Hodnoceni</h3>
-  <div class="hodnoceni  hodnoceni--skore-{{film.hodnoceni}}"></div>
-  <h3 class="podnadpis">Souvisejici filmy</h3>
-  <ul class="seznam">
-    {% for film in film.souvisejici %}
-    <li class="seznam__polozka">
-      <a class="seznam__odkaz" href="/film/{{ film.nazev | slug }}">{{ film.nazev }}</a>
-    </li>
-    {% endfor %}
-  </ul>
+  <section>
+    <h3 class="podnadpis">Hodnoceni</h3>
+    <div class="hodnoceni  hodnoceni--skore-{{film.hodnoceni}}"></div>
+  </section>
+  {% if film.souvisejici | length > 0 %}
+  <section>
+    <h3 class="podnadpis">Souvisejici filmy</h3>
+    <ul class="seznam">
+      {% for film in film.souvisejici %}
+      <li class="seznam__polozka">
+        <a class="seznam__odkaz" href="/film/{{ film.nazev | slug }}">{{ film.nazev }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
 </aside>
