@@ -1,4 +1,17 @@
-.detail__podrobnosti {
+.movie {
+  display: grid;
+  gap: 0 2rem;
+}
+@media (min-width: 50rem) {
+  .movie {
+    grid-template-columns: 1fr 12rem;
+  }
+}
+.movie__name {
+  margin: 0 0 0.5em;
+  font-size: 2rem;
+}
+.movie__details {
   margin: 0 0 1.7em;
   display: grid;
   grid-template-columns: auto 1fr;
@@ -6,51 +19,56 @@
   & dd {
     margin: 0;
   }
+  & dt {
+    font-weight: 700;
+  }
 }
-.detail__popisek {
-  font-weight: 700;
-}
-.hlavni-nadpis {
-  margin: 0 0 0.5em;
-  font-size: 2rem;
-}
-.podnadpis {
+.headline__small {
   margin: 0.8em0 0.2em;
   font-size: 1.5rem;
 }
-.detail__plakat {
+.movie__image {
   max-width: 100%;
   width: 100%;
   height: auto;
 }
-.autor__odkaz {
+.autor__link {
   font-style: italic;
   text-decoration: none;
   color: #3d5afe;
 }
 
-.hodnoceni {
+.hvezdy {
   --skore: 0;
   width: 7.5rem;
   height: 1.5rem;
   display: flex;
 }
-.hodnoceni::after {
+.hvezdy::after {
   background-image: url('/obrazky/hvezda-prazdna.svg');
   flex-grow: calc(5 - var(--skore));
 }
-.hodnoceni::before {
+.hvezdy::before {
   content: '';
   background-image: url('/obrazky/hvezda-vyplnena.svg');
   background-size: contain;
   flex-grow: var(--skore);
 }
-.hodnoceni--skore-5 {
+.hvezdy--skore-5 {
   --skore: 5;
 }
-.hodnoceni--skore-4 {
+.hvezdy--skore-4 {
   --skore: 4;
 }
-.hodnoceni--skore-3 {
+.hvezdy--skore-3 {
   --skore: 3;
+}
+.hvezdy--skore-2 {
+  --skore: 2;
+}
+.hvezdy--skore-1 {
+  --skore: 1;
+}
+.hvezdy--skore-0 {
+  --skore: 0;
 }

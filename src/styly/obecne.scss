@@ -12,6 +12,7 @@ body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
   font-family: $font;
+  min-height: 100vh;
 }
 .layout {
   display: grid;
@@ -24,20 +25,20 @@ body {
   padding: 2rem 1rem;
 }
 
-.seznam__odkaz {
+.list__link {
   color: #3d5afe;
   text-decoration: none;
 }
-.seznam__polozka {
+.list__item {
   padding: 0.2em 0;
   line-height: 1.1;
 }
-.seznam {
+.list {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
-.seznam__odkaz::before {
+.list__link::before {
   content: '';
   margin-bottom: 0.1em;
   width: 0.5em;
