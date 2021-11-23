@@ -7,7 +7,9 @@ html {
 *::after {
   box-sizing: inherit;
 }
-
+.meta-descr-film::after {
+  content: …;
+}
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0;

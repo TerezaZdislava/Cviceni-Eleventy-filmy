@@ -1,5 +1,25 @@
 [
   {
+    "nazev": "Klan Gucci",
+    "rok": 2021,
+    "zanr": ["Životopisný", "Thriller", "Drama", "Krimi"],
+    "zeme": ["USA"],
+    "delka": 164,
+    "obsah": {
+      "text": "Klan Gucci je inspirován šokujícím skutečným příběhem impéria italského módního domu. Tři desetiletí rodinné historie, v níž nechybí láska, zrada, dekadence, pomsta ani vražda, skládají dohromady mozaiku toho, co všechno s sebou nese slavná značka Gucci.",
+      "autor": {
+        "jmeno": "Forum Film CZ",
+        "odkaz": "http://www.vertical-ent.cz/"
+      }
+    },
+    "hodnoceni": 3,
+    "plakat": {
+      "url": "//image.pmgstatic.com/cache/resized/w360/files/images/film/posters/165/763/165763161_a0fecb.jpg",
+      "sirka": 720,
+      "vyska": 1066
+    }
+  },
+  {
     "nazev": "Duna",
     "rok": 2021,
     "zanr": ["Sci-Fi", "Akční", "Dobrodružný", "Drama"],
@@ -20,7 +40,6 @@
       "vyska": 1066
     }
   },
-
   {
     "nazev": "Drive",
     "rok": 2011,
